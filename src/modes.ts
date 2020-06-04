@@ -40,8 +40,8 @@ export function setModeCursorStyle(mode: Mode, editor: vscode.TextEditor): void 
     if (mode === Mode.Insert) {
         editor.options.cursorStyle = vscode.TextEditorCursorStyle.Line;
     } else if (mode === Mode.Normal) {
-        editor.options.cursorStyle = vscode.TextEditorCursorStyle.Underline;
+        editor.options.cursorStyle = vscode.TextEditorCursorStyle.block;
     } else if (mode === Mode.Visual || mode === Mode.VisualLine) {
-        editor.options.cursorStyle = vscode.TextEditorCursorStyle.LineThin;
+        editor.options.cursorStyle = vscode.TextEditorCursorStyle.block;
     }
 }
